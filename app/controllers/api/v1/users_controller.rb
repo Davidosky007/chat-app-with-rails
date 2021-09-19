@@ -6,18 +6,18 @@ module Api
       # GET /users
       def index
         @users = User.all
-        json_response(@users)
+        render  json: @users
       end
 
       # POST /users
       def create
         @user = User.create!(user_params)
-        json_response(@user, :created)
+        render json: :created
       end
 
       # GET /users/:id
       def show
-        json_response(@user)
+      render  json: @user
       end
 
       # PUT /users/:id

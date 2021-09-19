@@ -6,18 +6,18 @@ module Api
       # GET /messages
       def index
         @messages = Message.all
-        json_response(@messages)
+        render json: @messages
       end
 
       # POST /messages
       def create
         @message = Message.create!(message_params)
-        json_response(@message, :created)
+        render json:  :created
       end
 
       # GET /messages/:id
       def show
-        json_response(@message)
+        render json: @message
       end
 
       # PUT /messages/:id
