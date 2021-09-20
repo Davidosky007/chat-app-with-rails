@@ -6,18 +6,18 @@ module Api
       # GET /chatrooms
       def index
         @chatrooms = Chatroom.all
-        json_response(@chatrooms)
+       render json: @chatrooms
       end
 
       # POST /chatrooms
       def create
         @chatroom = Chatroom.create!(chatroom_params)
-        json_response(@chatroom, :created)
+       render json: (@chatroom, :created)
       end
 
       # GET /chatrooms/:id
       def show
-        json_response(@chatroom)
+      render  json: @chatroom
       end
 
       # PUT /chatrooms/:id
