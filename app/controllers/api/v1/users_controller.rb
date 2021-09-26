@@ -9,7 +9,7 @@ module Api
         render  json: @users
       end
 
-      # POST /users
+      # POST /api/v1/users
       def create
         @user = User.create!(user_params)
         render json: :created

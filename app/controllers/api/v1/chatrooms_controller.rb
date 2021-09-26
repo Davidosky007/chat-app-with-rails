@@ -17,7 +17,7 @@ module Api
 
       # GET /chatrooms/:id
       def show
-      render  json: @chatroom
+      render json: @chatroom
       end
 
       # PUT /chatrooms/:id
